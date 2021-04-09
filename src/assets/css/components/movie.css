@@ -1,0 +1,42 @@
+.movieBlock{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    height: 380px;
+    padding: .5em 1em;
+    margin: 1em auto;
+    overflow: hidden;
+    background-color: #333333;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    position: relative;
+
+}
+.movieBlock .movieImage{
+    width: 150px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: .5em 0;
+    box-shadow: 0px 0px 0px 3px #00808087;
+    border-radius: 5px;
+}
+.movieBlock .movieTitle{
+    color: #fff;
+    margin: .2em 0;
+}
+
+.movieInfo{
+    display: flex;
+    align-items: center;
+
+}
+.description{
+    color: #fff;    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-top: 1em;
+}
