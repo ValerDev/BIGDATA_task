@@ -12,25 +12,67 @@
     position: relative;
 
 }
+.linkImage{
+    position: relative;
+    z-index: 2;
+    border-radius: 5px;
+    margin-right: 1em;
+}
+.linkImage:hover .movieImage{
+    box-shadow: 0px 0px 0px 3px #00808087;
+}
+.linkImage:hover .hoveredBackground{
+    opacity: 1;
+}
+.hoveredBackground{
+    position: absolute;
+    top: 0 ;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: .2s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hoveredBackground span{
+    padding: .3em .5em;
+    background-color: #008080;
+    margin-bottom: 1em;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
 .movieBlock .movieImage{
     width: 150px;
     height: 250px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: .5em 0;
-    box-shadow: 0px 0px 0px 3px #00808087;
+    box-shadow: 0px 0px 0px 0px #00808087;
+    transition: .2s;
     border-radius: 5px;
 }
+
 .movieBlock .movieTitle{
     color: #fff;
     margin: .2em 0;
 }
 
 .movieInfo{
-    display: flex;
-    align-items: center;
-
+    display: flex; 
+}
+.movieInfo .details p{
+    color: #fff;
+    margin-bottom: .5em;
+}
+.movieInfo .details b{
+    color: #008080;
 }
 .description{
     color: #fff;    
@@ -39,4 +81,28 @@
     white-space: nowrap;
     font-weight: bold;
     margin-top: 1em;
+}
+
+@media (max-width: 1300px){
+    .movieBlock{
+        min-width: 100%;
+        height: unset;
+    }
+    
+}
+@media (max-width: 768px){
+    .linkImage{
+        margin: .5em 0;
+        width: max-content;
+    }
+    .hoveredBackground{
+        background-color: rgba(0,0,0,0.3);
+        opacity: 1;
+    }
+    .movieInfo{
+        flex-direction: column; 
+    }
+    .movieBlock .movieImage{
+        box-shadow: 0px 0px 0px 3px #00808087;
+    }
 }

@@ -1,0 +1,36 @@
+.moviesList{
+    display: flex;
+    flex-wrap: wrap;
+}   
+.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em .5em;
+}
+.pages .page{
+    font-size: 20px;
+    color: #fff;
+    background-color: #333333;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin: .2em;
+    transition: .2s;
+    box-shadow: 0px 0px 0px 0px #00808087;
+
+}
+.pages .page:hover{
+    opacity: .5;
+}
+.pages .page:active{
+    box-shadow: 0px 0px 0px 3px #00808087;
+}
+.pages .pageActive{
+    box-shadow: 0px 0px 0px 3px #00808087;
+
+}

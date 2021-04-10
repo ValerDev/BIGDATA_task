@@ -1,0 +1,26 @@
+.comment{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+   
+
+}
+.comment .text{
+    color: #fff;
+    font-weight: 800;
+    background-color: #282726;
+    width:100%;
+    padding: 1em;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.removeComment{
+    cursor: pointer;
+    transition: .2s;
+}
+.removeComment:hover{
+    opacity: .5;
+}

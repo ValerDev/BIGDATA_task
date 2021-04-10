@@ -1,0 +1,14 @@
+.rating-block{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .5em 0;
+}
+.rating-block>*{
+    transition: .3s;
+}
+.star{
+    color: #008080;
+    cursor: pointer;
+    font-size: 30px;
+}
