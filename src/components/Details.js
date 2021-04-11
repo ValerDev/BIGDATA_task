@@ -36,7 +36,7 @@ const Details = () => {
         return localStorage.getItem("comments") ? setComments( JSON.parse(localStorage.getItem("comments"))) : false
     }
     const removeComment = (id,movieID) =>{
-       const filteredComments = comments.filter(comment =>comment.id !== id && comment.movieID !== movieID)
+       const filteredComments = comments.filter(comment =>comment.id !== id && comment.movieID === movieID)
        setComments(filteredComments)
        localStorage.setItem("comments", JSON.stringify(filteredComments));
     }
