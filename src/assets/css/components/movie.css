@@ -14,6 +14,7 @@
 }
 .linkImage{
     position: relative;
+    height: max-content;
     z-index: 2;
     border-radius: 5px;
     margin-right: 1em;
@@ -60,8 +61,11 @@
 }
 
 .movieBlock .movieTitle{
-    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
     margin: .2em 0;
+    color: #fff;
 }
 
 .movieInfo{

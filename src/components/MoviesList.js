@@ -18,6 +18,7 @@ const MovilesList = () => {
     useEffect(() => {
         getMovieList(query);
     }, [query]);
+    console.log(movieList);
     return (
         <div className={css.moviesMainContent}>
 
