@@ -40,7 +40,6 @@ const Details = () => {
        setComments(filteredComments)
        localStorage.setItem("comments", JSON.stringify(filteredComments));
     }
-    console.log(comments);
 
     useEffect(() => {
         getMovie()   

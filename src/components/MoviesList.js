@@ -1,9 +1,13 @@
-import React, { useState, useEffect }  from 'react'
+import React, { useState, useEffect } from 'react'
 import css from '../assets/css/components/moviesList.css';
 import Movie from './Movie.js';
 import Loader from './Loader.js'
+import {useParams , Link} from 'react-router-dom';
+
 const MovilesList = () => {
-    const [query, setQuery] = useState(1);
+    let { pageNumber } = useParams();
+
+    const [query, setQuery] = useState(+pageNumber);
     const [movieList, setMovieList] = useState(null);
     const getMovieList = (query) => {
         setMovieList(null);
@@ -18,7 +22,6 @@ const MovilesList = () => {
     useEffect(() => {
         getMovieList(query);
     }, [query]);
-    console.log(movieList);
     return (
         <div className={css.moviesMainContent}>
 
@@ -38,19 +41,7 @@ const MovilesList = () => {
             {movieList?.movies.length ? (
                 <div className={css.pages}>
                     {[1, 2, 3].map((page) => (
-                        <div
-                            className={
-                                page === query
-                                    ? `${css.page} ${css.pageActive}`
-                                    : `${css.page}`
-                            }
-                            key={page}
-                            onClick={() => {
-                                setQuery(page);
-                            }}
-                        >
-                            {page}
-                        </div>
+                        <Link to={`/movies-list/page_${page}`} key={page}> <div className={page === +pageNumber ? `${css.page} ${css.pageActive}` : `${css.page}`}  onClick={() => {setQuery(page);}}>{page}</div></Link>
                     ))}
                 </div>
             ) : (
